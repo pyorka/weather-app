@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="search-box">
+            <i class="fa-solid fa-location-dot"></i>
+            <input autofocus type="text" placeholder="Dimana lokasi kamu?" class="search-input">
+            <button class="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+
+        <div class="weather-box">
+            <p class="weather-title"></p>
+            <img src="" alt="">
+            <p class="weather-text"></p>
+            <p class="weather-desc"></p>
+        </div>
+        <div class="weather-details">
+            <div class="humidity">
+                <p>Kelembapan</p>
+                <p>
+                <i class="fa-solid fa-water"></i>
+                <span class="humidity-text"></span></p>
+            </div>
+            <div class="country">
+                <p>Negara</p>
+                <p>
+                    <i class="fa-solid fa-flag"></i>
+                    <span class="flag-text"></span>
+                </p>
+            </div>
+            <div class="wind">
+                <p>Angin</p>
+                <p>
+                <i class="fa-solid fa-wind"></i>
+                <span class="wind-text"></span></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
