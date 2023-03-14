@@ -86,8 +86,8 @@ const fetchData = () => {
 
       flagText.innerHTML = `${json.sys.country}`;
       weatherTitle.innerHTML = `${json.name}`;
-      humidityText.innerHTML = `${json.main.humidity}`;
-      windText.innerHTML = `${json.wind.speed}`;
+      humidityText.innerHTML = `${json.main.humidity}<span style='font-size: 10px;'>%</span>`;
+      windText.innerHTML = `${json.wind.speed} <span style='font-size: 10px;'>km/h</span>`;
       weatherText.innerHTML = `${cuaca}, ${parseInt(
         json.main.temp
       )} <span style='font-size: 10px;'>°C</span>`;

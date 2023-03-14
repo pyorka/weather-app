@@ -19,7 +19,7 @@ body{
     padding: 20px;
     border-radius: 20px;
     height: 75px;
-    width: 350px;
+    width: 360px;
 }
 
 .search-box{
@@ -83,10 +83,17 @@ body{
     scale: 0;
     display: flex;
     justify-content: space-between;
-    margin: 5%;
+    margin: 5% 0;
     background-color: #2B3467;
     color: #fff;
     border-radius: 5px;
     padding: 10px;
+}
+.weather-details .weather-info i{
+    margin-right: 5px;
+}
+
+.weather-details .weather-info span{
+    vertical-align: top;
 }
 
