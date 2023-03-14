@@ -11,6 +11,7 @@ const windText = document.querySelector(".wind-text");
 const weatherDetails = document.querySelector(".weather-details");
 const weatherTitle = document.querySelector(".weather-title");
 const flagText = document.querySelector(".flag-text");
+let cuaca = "";
 
 const checkInput = (data) => {
   if (data == "" || data == "404") {
@@ -40,30 +41,35 @@ const fetchData = () => {
 
       switch (json.weather[0].main) {
         case "Clear":
+          cuaca = "Panas";
           image.src = "images/clear.png";
           weatherDesc.innerHTML =
             "Matahari bersinar terik, tetapi kamu tetap yang paling menarik :)";
           break;
 
         case "Rain":
+          cuaca = "Jujan";
           image.src = "images/rain.png";
           weatherDesc.innerHTML =
             "Lagi hujan nih tapi bakal reda, sedangkan rinduku ke kamu ga bakal reda :)";
           break;
 
         case "Snow":
+          cuaca = "Salju";
           image.src = "images/snow.png";
           weatherDesc.innerHTML =
             "Kamu tahu nggak persamaan kamu dengan salju? Sama-sama menyejukkan hati aku :)";
           break;
 
         case "Clouds":
+          cuaca = "Mendung";
           image.src = "images/cloud.png";
           weatherDesc.innerHTML =
             "Di luar mendung, untung ada kamu yang selalu menyinari hatiku :)";
           break;
 
         case "Haze":
+          cuaca = "Kabut";
           image.src = "images/mist.png";
           weatherDesc.innerHTML =
             "Kabut berbahaya karna memberikan ilusi penglihatan, kamu berbahaya karna membuatku jatuh cinta :)";
@@ -82,7 +88,7 @@ const fetchData = () => {
       weatherTitle.innerHTML = `${json.name}`;
       humidityText.innerHTML = `${json.main.humidity}`;
       windText.innerHTML = `${json.wind.speed}`;
-      weatherText.innerHTML = `${parseInt(
+      weatherText.innerHTML = `${cuaca}, ${parseInt(
         json.main.temp
       )} <span style='font-size: 10px;'>°C</span>`;
     });
