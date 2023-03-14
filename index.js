@@ -48,7 +48,7 @@ const fetchData = () => {
           break;
 
         case "Rain":
-          cuaca = "Jujan";
+          cuaca = "Hujan";
           image.src = "images/rain.png";
           weatherDesc.innerHTML =
             "Lagi hujan nih tapi bakal reda, sedangkan rinduku ke kamu ga bakal reda :)";
